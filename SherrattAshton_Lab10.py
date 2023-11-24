@@ -78,3 +78,17 @@ plt.legend()
 plt.show()
 
 # Part 3 : spectral radius function - Shane
+
+def spectral_radius(A):
+    '''
+    Description: function that takes a 2D array (Matrix) and returns the
+    eigenvalue with a maximum absolute value.
+    -----------------------------------------------------------------------
+    A : ndarray of ints or floats
+        Matrix for which spectral radius is to be computed
+    '''
+    # Compute the eigenvalues
+    eigvals = np.linalg.eig(A)[0]
+    # Find max
+    eig_max = np.max(np.abs(eigvals))
+    return eig_max
