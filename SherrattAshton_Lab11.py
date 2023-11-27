@@ -1,3 +1,5 @@
+# Members: Dakota, Shane, Robert, and Ashton
+
 import numpy as np
 import matplotlib.pyplot as plt
 from SherrattAshton_Lab10 import make_initialcond
@@ -37,10 +39,12 @@ def advection1d(method, nspace, ntime, tau_rel, params):
     # matrix for FTCS and Lax method
     B = make_tridiagonal(nspace, -1, 0, 1)
     B[0, nspace - 1] = -1 
-    B[nspace - 1, 1] = 1
+    B[nspace - 1, 0] = 1
+    # print(B)
 
     # matrix for Lax method
     C = np.abs(B)
+    # print(C)
 
     # solve according to method given
     # FTCS method
