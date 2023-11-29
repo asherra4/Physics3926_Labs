@@ -76,7 +76,7 @@ def advection1d(method, nspace, ntime, tau_rel, params):
 
     return a, x_grid, t_grid
 
-# Part 1 - Shane, Dakota
+# Part 2 - Shane, Dakota
 
 a, x, t = advection1d('lax', nspace=300, ntime=501, tau_rel=1, params=[5,1])
 
